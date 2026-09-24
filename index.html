@@ -4,173 +4,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Bootstrap Class - Geração Tech 4.0</title>
-    <style>
-        /* Toggle do tema fixado no canto inferior direito */
-        #themeToggle {
-            position: fixed;
-            bottom: 20px;
-            right: 15px;
-            z-index: 1000;
-        }
-    </style>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <title>Meu Dashboard</title>
 </head>
 
 <body>
-    <div>
-        <h1>Meu Dashboard</h1>
-        <p>Gerencie suas informações</p>
-        <div>Você possui novas notificações</div>
-        <div>
-            <div>
-                <div>
-                    <div>
-                        <h5>Perfil</h5>
-                        <p>Gerencie seus dados pessoais</p>
-                        <button>Acessar</button>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <h5>Relatórios</h5>
-                        <p>Consulte seus resultados</p>
-                        <button>Visualizar</button>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <h5>Configurações</h5>
-                        <p>Personalize sua conta</p>
-                        <button>Configurar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h2>Contato</h2>
-        <div>
-            <div>
-                <form>
-                    <div>
-                        <label>Nome</label>
-                        <input>
-                    </div>
-                    <div>
-                        <label>E-mail</label>
-                        <input>
-                    </div>
-                    <div>
-                        <label>Mensagem</label>
-                        <textarea></textarea>
-                    </div>
-                    <button>Enviar</button>
-                </form>
-            </div>
-            <div>
-                <h3>Status dos canais de atendimento</h3>
-                <div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Canal</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>WhatsApp</td>
-                                <td><span>Online</span></td>
-                            </tr>
-                            <tr>
-                                <td>E-mail</td>
-                                <td><span>Em análise</span></td>
-                            </tr>
-                            <tr>
-                                <td>Suporte</td>
-                                <td><span>Agendado</span></td>
-                            </tr>
-                            <tr>
-                                <td>Atendimento</td>
-                                <td><span>Indisponível</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <h3>Redes sociais</h3>
-        <div>
-            <a 
-                href="https://github.com/carloeira" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                GitHub
-            </a>
-            <a 
-                href="https://linkedin.com/in/carloeira" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                LinkedIn
-            </a>
-            <a 
-                href="https://instagram.com/ielceara" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                Instagram
-            </a>
-        </div>
-    </div>
 
-    <button 
-        id="themeToggle" 
-        class="btn btn-outline-success ms-2" 
+    <main class="container py-4">
+
+        <!-- Título -->
+        <h1 class="mt-3"
+            style="font-family: 'Bebas Neue', sans-serif;">
+
+            Meu Dashboard
+            <i class="fa-solid fa-gauge-high text-primary"></i>
+
+        </h1>
+
+        <p class="lead text-body-secondary">
+            Gerencie suas informações
+        </p>
+
+
+        <!-- Alerta -->
+        <div class="alert alert-info">
+
+            <i class="fa-solid fa-circle-info me-2"></i>
+
+            Você possui novas notificações
+
+        </div>
+
+
+        <!-- Cards -->
+        <div class="row g-3 mb-5">
+
+            <!-- Perfil -->
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h5 class="card-title">
+
+                            <i class="fa-solid fa-user text-primary me-2"></i>
+
+                            Perfil
+
+                        </h5>
+
+                        <p class="card-text">
+                            Gerencie seus dados pessoais
+                        </p>
+
+                        <button class="btn btn-primary mt-auto align-self-start">
+                            Acessar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Relatórios -->
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h5 class="card-title">
+
+                            <i class="fa-solid fa-chart-line text-success me-2"></i>
+
+                            Relatórios
+
+                        </h5>
+
+                        <p class="card-text">
+                            Consulte seus resultados
+                        </p>
+
+                        <button class="btn btn-success mt-auto align-self-start">
+                            Visualizar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Configurações -->
+            <div class="col-12 col-md-4">
+
+                <div class="card h-100">
+
+                    <div class="card-body d-flex flex-column">
+
+                        <h5 class="card-title">
+
+                            <i class="fa-solid fa-gear text-secondary me-2"></i>
+
+                            Configurações
+
+                        </h5>
+
+                        <p class="card-text">
+                            Personalize sua conta
+                        </p>
+
+                        <button class="btn btn-outline-primary mt-auto align-self-start">
+                            Configurar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Contato -->
+        <h2 class="mb-3">
+            <i class="fa-solid fa-envelope me-2"></i>
+            Contato
+        </h2>
+
+
+        <div class="row g-4 mt-1 align-items-start">
+
+            <!-- Formulário -->
+            <div class="col-12 col-md-6">
+
+                <div class="card">
+
+                    <div class="card-body">
+
+                        <form>
+
+                            <div class="mb-3">
+
+                                <label for="nome" class="form-label">
+                                    Nome
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="nome"
+                                    placeholder="Digite seu nome">
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label for="email" class="form-label">
+                                    E-mail
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="Digite seu e-mail">
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label for="mensagem" class="form-label">
+                                    Mensagem
+                                </label>
+
+                                <textarea
+                                    class="form-control"
+                                    id="mensagem"
+                                    rows="4"
+                                    placeholder="Digite sua mensagem"></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary">
+
+                                <i class="fa-solid fa-paper-plane me-1"></i>
+
+                                Enviar
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Status -->
+            <div class="col-12 col-md-6">
+
+                <div class="card h-100">
+
+                    <div class="card-body">
+
+                        <h4 class="mb-3">
+                            Status dos canais
+                        </h4>
+
+                        <div class="table-responsive">
+
+                            <table class="table table-hover align-middle">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Canal</th>
+                                        <th>Status</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>
+                                            <i class="fa-brands fa-whatsapp me-2 text-success"></i>
+                                            WhatsApp
+                                        </td>
+
+                                        <td>
+                                            <span class="badge text-bg-success">
+                                                Online
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <i class="fa-solid fa-envelope me-2 text-primary"></i>
+                                            E-mail
+                                        </td>
+
+                                        <td>
+                                            <span class="badge text-bg-warning">
+                                                Em análise
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <i class="fa-solid fa-headset me-2 text-info"></i>
+                                            Suporte
+                                        </td>
+
+                                        <td>
+                                            <span class="badge text-bg-info">
+                                                Agendado
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
+                                        <td>
+                                            <i class="fa-solid fa-phone-slash me-2 text-danger"></i>
+                                            Atendimento
+                                        </td>
+
+                                        <td>
+                                            <span class="badge text-bg-danger">
+                                                Indisponível
+                                            </span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Redes sociais -->
+        <h3 class="mt-5 mb-3">
+            Redes sociais
+        </h3>
+
+        <div class="d-flex gap-2 mb-5">
+
+            <a
+                href="https://github.com/carloeira"
+                target="_blank"
+                class="btn btn-outline-secondary">
+
+                <i class="fa-brands fa-github me-1"></i>
+                GitHub
+
+            </a>
+
+
+            <a
+                href="https://linkedin.com/in/carloeira"
+                target="_blank"
+                class="btn btn-outline-primary">
+
+                <i class="fa-brands fa-linkedin me-1"></i>
+                LinkedIn
+
+            </a>
+
+
+            <a
+                href="https://instagram.com/ielceara"
+                target="_blank"
+                class="btn btn-outline-danger">
+
+                <i class="fa-brands fa-instagram me-1"></i>
+                Instagram
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Botão tema -->
+    <button
+        id="themeToggle"
+        class="btn btn-primary position-fixed bottom-0 end-0 m-3 rounded-circle"
         type="button">
+
+        <i class="fa-solid fa-moon"></i>
+
     </button>
 
-    <script>
-        const themeToggle = document.getElementById("themeToggle");
 
-        // Verifica se existe um tema salvo
-        let theme = localStorage.getItem("theme");
-
-        // Se não existir, usa o tema preferido como claro
-        if (!theme) {
-            theme = window.matchMedia("(prefers-color-scheme: light)").matches
-                ? "dark"
-                : "light";
-        }
-
-        // Função para aplicar o tema
-        function applyTheme() {
-            document.documentElement.setAttribute("data-bs-theme", theme);
-
-            if (theme === "dark") {
-                themeToggle.textContent = "🌙";
-            } else {
-                themeToggle.textContent = "☀️";
-            }
-        }
-
-        // Aplica o tema ao abrir a página
-        applyTheme();
-
-        // Troca o tema ao clicar
-        themeToggle.addEventListener("click", () => {
-            theme = theme === "light" ? "dark" : "light";
-
-            localStorage.setItem("theme", theme);
-
-            applyTheme();
-        });
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+
+    <!-- Tema claro / escuro -->
+    <script>
+
+        const themeToggle = document.getElementById("themeToggle");
+
+        let theme = localStorage.getItem("theme") || "light";
+
+
+        function applyTheme() {
+
+            document.documentElement.setAttribute(
+                "data-bs-theme",
+                theme
+            );
+
+
+            if (theme === "dark") {
+
+                themeToggle.innerHTML =
+                    '<i class="fa-solid fa-sun"></i>';
+
+            } else {
+
+                themeToggle.innerHTML =
+                    '<i class="fa-solid fa-moon"></i>';
+
+            }
+
+        }
+
+
+        applyTheme();
+
+
+        themeToggle.addEventListener("click", function () {
+
+            theme =
+                theme === "light"
+                    ? "dark"
+                    : "light";
+
+
+            localStorage.setItem(
+                "theme",
+                theme
+            );
+
+
+            applyTheme();
+
+        });
+
+    </script>
+
 </body>
+
 </html>
